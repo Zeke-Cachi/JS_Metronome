@@ -45,6 +45,7 @@ h1 {
     font-weight: bolder;
     background: #D87F2C;
     border: white;
+    user-select: none;
 }
 
 .start-button {
