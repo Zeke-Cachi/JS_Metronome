@@ -15,6 +15,7 @@ let bpm = 150;
 let timer;
 let timerId;
 let soundInterval;
+let isProcessing = false;
 
 
 //FUNCTIONS
@@ -151,12 +152,16 @@ let releaseButtonDown = decrease.addEventListener('mouseup', () => {
 })
 
 let pressFingerDown = decrease.addEventListener('touchstart', (e) => {
-    mouseFingerEvents(e);
-
+    e.preventDefault();
+    if(!isProcessing) {
+        isProcessing = true;
+        mouseFingerEvents(e);
+    }
 })
 
-let releaseFingerDown = decrease.addEventListener('touchend', () => {
+let releaseFingerDown = decrease.addEventListener('touchend', (e) => {
     clearTimeout(pressAndHold);
+    isProcessing = false;
 })
 
 
@@ -170,11 +175,16 @@ let releaseButtonUp = increase.addEventListener('mouseup', () => {
 })
 
 let pressFingerUp = increase.addEventListener('touchstart', (e) => {
-    mouseFingerEvents(e);
+    e.preventDefault();
+    if(!isProcessing) {
+        isProcessing = true;
+        mouseFingerEvents(e);
+    }
 })
 
 let releaseFingerUp = increase.addEventListener('touchend', () => {
     clearTimeout(pressAndHold);
+    isProcessing = false;
 })
 
 
