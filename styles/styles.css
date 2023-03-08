@@ -52,6 +52,7 @@ h1 {
     width: 5rem;
     height: 3rem;
     border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
 }  
 
 .side-buttons {
@@ -62,9 +63,17 @@ h1 {
     transition: 100ms transform;
 } 
 
+.side-buttons:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
 .side-buttons:active {
     transform: scale(0.9);
+    -webkit-tap-highlight-color: transparent;
 }
+
+
 
 input[type="range"] {
     margin: 1rem 1rem;
@@ -78,6 +87,10 @@ input[type="range"] {
     padding-bottom: 1rem;
 }
 
+input[type="range"]:focus {
+    outline: none;
+}
+
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 1.5rem;
@@ -86,6 +99,10 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 1rem;
     border-radius: 100%;
     transition: 100ms transform;
+}
+
+input[type="range"]::-webkit-slider-thumb:focus {
+    outline: none;
 }
 
 input[type="range"]::-moz-range-thumb {
