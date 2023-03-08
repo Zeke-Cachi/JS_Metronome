@@ -7,8 +7,7 @@ let startButton = document.querySelector('.start-button');
 
 
 //AUDIO FILES
-let primaryBeat = new Audio('../sounds/primary-beat.wav');
-let secondaryBeat = new Audio('../sounds/secondary-beat.wav');
+let primaryBeat = new Audio('./sounds/primary-beat.wav');
 
 
 //VARIABLES
