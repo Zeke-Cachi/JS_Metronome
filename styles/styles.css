@@ -85,6 +85,7 @@ input[type="range"] {
     background: white;
     height: 1rem;
     padding-bottom: 1rem;
+    -webkit-tap-highlight-color: transparent;
 }
 
 input[type="range"]:focus {
