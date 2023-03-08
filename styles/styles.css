@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    touch-action: none;
 }
 
 body {
@@ -74,8 +75,6 @@ h1 {
     -webkit-tap-highlight-color: transparent;
 }
 
-
-
 input[type="range"] {
     margin: 1rem 1rem;
     border-radius: 10px;
@@ -120,6 +119,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1.2);
 }
 
+/*MAKE SHADOW APPEAR ON START BUTTON AT THE BEAT OF THE METRONOME*/
 .animate-button {
     animation: buttonBeat 50ms infinite;
 }
@@ -138,7 +138,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 }
 
-
+/*SMALL MEDIUM SCREENS*/
 @media screen and (min-width: 576px) {
     h1 {
         font-size: 4rem;
@@ -172,6 +172,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     } 
 }
 
+/*MEDIUM SCREENS*/
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 4.5rem;
@@ -192,6 +193,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 }
 
+/*LARGE SCREENS*/
 @media screen and (min-width: 992px) {
     h1 {
 
