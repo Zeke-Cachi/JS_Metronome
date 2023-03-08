@@ -63,6 +63,7 @@ h1 {
     border-radius: 100%;
     font-size: 2rem;
     transition: 100ms transform;
+    touch-action: none;
 } 
 
 .side-buttons:focus {
